@@ -254,7 +254,7 @@ ul{
 }
 
 /* media query for menu */
-@media(max-width: 800px){
+@media only screen and (max-width: 700px){
     body{
         display: none;
     }
