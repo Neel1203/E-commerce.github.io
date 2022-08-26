@@ -7,6 +7,28 @@ body{
     font-family: 'Poppins', sans-serif;
     text-transform: capitalize;
 }
+html{
+    scroll-behavior: smooth;
+}
+#myBtn{
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 99;
+    font-size: 30px;
+    border: none;
+    outline: none;
+    background-color: #ff523b;
+    color: white;
+    cursor: pointer;
+    padding: 1rem 1.1rem;
+    border-radius: 50%;
+}
+#myBtn:hover{
+    background-color: black;
+    transition: 1s all;
+}
 .navbar{
     display: flex;
     align-items: center;
@@ -127,7 +149,7 @@ h4{
 
 }
 .col-4:hover{
-    transform: translateY(-5px);
+    transform: translateY(-15px);
 }
 .offer{
     background: radial-gradient(#fff, #ffd6d6);
@@ -151,7 +173,7 @@ small{
     transition: transform 0.5s;
 }
 .testimonials .col-3:hover{
-    transform: translateY(-10px);
+    transform: translateY(-15px);
 }
 .fa.fa-quote-left{
     font-size: 34px;
@@ -237,7 +259,45 @@ ul{
 .copy{
     text-align: center;
 }
-
+.menu-icon{
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+/*--------media query for navbar---------*/
+@media only screen and (max-width: 800px){
+    
+    .menu-icon{
+        display: block;
+    }
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: #fff;
+    }
+}
+/*--------media query for less than 600px screen devices---------*/
+@media only screen and (max-width: 600px){
+    .row{
+        text-align: center;
+    }
+    .col-2, .col-3, .col-4{
+        flex-basis: 100%;
+    }
+}
 /*******************/
 /* UTILITY CLASSES */
 /*******************/
@@ -247,15 +307,4 @@ ul{
 }
 .theme-color{
     color: #ff523b;
-}
-.menu-icon{
-    width: 28px;
-    margin-left: 20px;
-}
-
-/* media query for menu */
-@media only screen and (max-width: 800px){
-    body{
-        display: none;
-    }
 }
