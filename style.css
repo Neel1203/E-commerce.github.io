@@ -13,10 +13,10 @@ html{
 #myBtn{
     display: none;
     position: fixed;
-    bottom: 40px;
-    right: 40px;
+    bottom: 30px;
+    right: 30px;
     z-index: 99;
-    font-size: 30px;
+    font-size: 25px;
     border: none;
     outline: none;
     background-color: #ff523b;
