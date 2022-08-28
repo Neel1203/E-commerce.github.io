@@ -19,7 +19,7 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <img src="./images/logo.png" width="125px">
+                    <a href="./index.html"><img src="./images/logo.png" width="125px"></a>
                 </div>
                 <nav>
                     <ul id="menuItems">
@@ -30,7 +30,7 @@
                         <li><a href="">Account</a></li>
                     </ul>
                 </nav>
-                <img src="./images/cart.png" width="30px" height="30px">
+                <a href="./cart.html"><img src="./images/cart.png" width="30px" height="30px"></a>
                 <img src="./images/menu.png" class="menu-icon" onclick="menuToggle()">
             </div>
         </div>
@@ -92,7 +92,7 @@
 
 
     <div class="small-container">
-        <div class="row">
+        <div class="row reveal">
             <div class="col-4">
                 <img src="./images/product-9.jpg">
                 <h4>black sportx watch</h4>
@@ -218,6 +218,29 @@
         function topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <!-- Script for OnScroll Event -->
+    <script type="text/javascript">
+        window.addEventListener('scroll', reveal);
+
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal');
+
+            for(var i = 0; i < reveals.length; i++){
+
+                var windowHeight = window.innerHeight;
+                var revealTop = reveals[i].getBoundingClientRect().top;
+                var revealPoint = 10;
+
+                if (revealTop < windowHeight - revealPoint){
+                    reveals[i].classList.add('active');
+                }
+                else{
+                    reveals[i].classList.remove('active');
+                }
+            }
         }
     </script>
 

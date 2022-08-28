@@ -20,7 +20,7 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <img src="./images/logo.png" width="125px">
+                    <a href="./index.html"><img src="./images/logo.png" width="125px"></a>
                 </div>
                 <nav>
                     <ul id="menuItems">
@@ -31,7 +31,7 @@
                         <li><a href="">Account</a></li>
                     </ul>
                 </nav>
-                <img src="./images/cart.png" width="30px" height="30px">
+                <a href="./cart.html"><img src="./images/cart.png" width="30px" height="30px"></a>
                 <img src="./images/menu.png" class="menu-icon" onclick="menuToggle()">
             </div>
             <div class="row">
@@ -51,7 +51,7 @@
     <!---------featured categories--------->
     <div class="categories">
         <div class="small-container">
-            <div class="row">
+            <div class="row reveal">
                 <div class="col-3">
                     <img src="./images/category-1.jpg">
                 </div>
@@ -69,7 +69,7 @@
     <!---------featured products----------->
     <div class="small-container">
         <h2 class="title">featured products</h2>
-        <div class="row">
+        <div class="row reveal">
             <div class="col-4">
                 <img src="./images/product-1.jpg">
                 <h4>red printed t-shirt</h4>
@@ -121,7 +121,7 @@
         </div>
         <!---------latest products----------->
         <h2 class="title">latest products</h2>
-        <div class="row">
+        <div class="row reveal">
             <div class="col-4">
                 <img src="./images/product-5.jpg">
                 <h4>puma gray sports shoes</h4>
@@ -171,7 +171,7 @@
                 <p>$15.00</p>
             </div>
         </div>
-        <div class="row">
+        <div class="row reveal">
             <div class="col-4">
                 <img src="./images/product-9.jpg">
                 <h4>black sportx watch</h4>
@@ -245,7 +245,7 @@
     <!--testimonials-->
     <div class="testimonials">
         <div class="small-container">
-            <div class="row">
+            <div class="row reveal">
                 <div class="col-3">
                     <i class="fa fa-quote-left"></i>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio minus accusantium facilis,
@@ -388,6 +388,29 @@
         function topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <!-- Script for OnScroll Event -->
+    <script type="text/javascript">
+        window.addEventListener('scroll', reveal);
+
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal');
+
+            for(var i = 0; i < reveals.length; i++){
+
+                var windowHeight = window.innerHeight;
+                var revealTop = reveals[i].getBoundingClientRect().top;
+                var revealPoint = 10;
+
+                if (revealTop < windowHeight - revealPoint){
+                    reveals[i].classList.add('active');
+                }
+                else{
+                    reveals[i].classList.remove('active');
+                }
+            }
         }
     </script>
 
