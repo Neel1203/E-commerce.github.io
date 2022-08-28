@@ -384,7 +384,8 @@ td img{
 }
 .total-price{
    display: flex;
-   justify-content: flex-end;
+   flex-direction: column;
+   align-items: flex-end;
 }
 .total-price table{
     border-top: 3px solid #ff523b;
@@ -394,8 +395,11 @@ td img{
 th:last-child, td:last-child{
     text-align: right;
 }
-
-
+.payment{
+    display: flex;
+    justify-content: flex-end;
+    width: 400px;
+}
 /*--------media query for navbar---------*/
 @media only screen and (max-width: 600px){
     
