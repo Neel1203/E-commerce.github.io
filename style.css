@@ -453,9 +453,11 @@ form .btn:focus{
 }
 #loginform{
     left: -300px;
+    padding: 0px 15px;
 }
 #regform{
     left: 0;
+    padding: 0px 15px;
 }
 form a{
     font-size: 12px;
