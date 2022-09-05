@@ -372,6 +372,7 @@ td input{
     width: 40px;
     height: 30px;
     padding: 5px;
+    margin-left: 15px;
 }
 td a{
     color: #ff523b;
@@ -453,9 +454,11 @@ form .btn:focus{
 }
 #loginform{
     left: -300px;
+    padding: 0px 15px;
 }
 #regform{
     left: 0;
+    padding: 0px 15px;
 }
 form a{
     font-size: 12px;
@@ -469,10 +472,6 @@ form a{
     transform: translateX(100px);
     transition: transform 1s;
 }
-
-
-
-
 
 /*--------media query for navbar---------*/
 @media only screen and (max-width: 600px){
